@@ -9,16 +9,19 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Project Template</title>
+    <title>DND 5e Encounter Generator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/paper.bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
+
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/hover.js"></script>
+    <script type="text/javascript" src="js\thresholds.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- HTML5 shim and Respond.js for I vc v vE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,13 +30,101 @@
     <![endif]-->
   </head>
   <body>
-    
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class=navbar-header>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="navbar-brand">5e Encounter Generator</div>
+        </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div id="alerts">
+        <div class="alert alert-warning alert-dismissible" role="alert" id="noLevel">
+          <button type="button" class="close" onclick="hideAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning,</strong> you must select a level before adding a character
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Characters</div>
+            <div class="panel-body">
+                <div class="text-center">
+                  <div id="characterSetup">
+                  <!-- Single button -->
+                  <div class="btn-group">
+                    <button type="button" id="levelSelectButton" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Add  Character   <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" onclick="selectLevelSelected(1)">Level 1</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(2)">Level 2</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(3)">Level 3</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(4)">Level 4</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(5)">Level 5</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(6)">Level 6</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(7)">Level 7</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(8)">Level 8</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(9)">Level 9</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(10)">Level 10</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(11)">Level 11</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(12)">Level 12</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(13)">Level 13</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(14)">Level 14</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(15)">Level 15</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(16)">Level 16</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(17)">Level 17</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(18)">Level 18</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(19)">Level 19</a></li>
+                      <li><a href="#" onclick="selectLevelSelected(20)">Level 20</a></li>
+
+
+                    </ul>
+                    <button type="button" class="btn btn-secondary" onclick="addCharacter()">+</button>
+                  </div>
+                  <!-- Characters -->
+                  <div id="characters">
+
+                  </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">Thing but with tabs</div>
+            <div class="panel-body" id="testThing">
+
+                <button type="button" class="btn btn-secondary" onclick="testFunction()">+</button>
+            </div>
+          </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </body>
 
-    
+
     <!-- Bootstrap core JavaScript-->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
